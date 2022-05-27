@@ -5,7 +5,7 @@
 
 /* global document, Office, Word */
 
-Office.onReady(info => {
+Office.onReady((info) => {
   if (info.host === Office.HostType.Word) {
     document.getElementById("sideload-msg").style.display = "none";
     document.getElementById("app-body").style.display = "flex";
@@ -14,7 +14,7 @@ Office.onReady(info => {
 });
 
 export async function run() {
-  return Word.run(async context => {
+  return Word.run(async (context) => {
     /**
      * Insert your Word code here
      */
